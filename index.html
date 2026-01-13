@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mordecai - Tech Guy | Portfolio</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Index.css">
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Mordecai - Tech Guy. Frontend developer specializing in building responsive, accessible web experiences with HTML, CSS, and JavaScript.">
+  <meta name="keywords" content="frontend developer, web developer, HTML, CSS, JavaScript, portfolio">
+  <meta name="author" content="Mordecai">
+  <meta name="theme-color" content="#07080a">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mordecai - Tech Guy | Portfolio">
+  <meta property="og:description" content="Frontend developer specializing in building responsive, accessible web experiences.">
+  <meta property="og:image" content="mordecai.jpeg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mordecai - Tech Guy | Portfolio">
+  <meta name="twitter:description" content="Frontend developer specializing in building responsive, accessible web experiences.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="scrollProgress" aria-hidden="true"></div>
+  
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header id="siteHeader" class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="#home" class="brand" aria-label="Mordecai Tech Guy - Home">
+        Mordecai<span class="dot">Tech Guy</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#projects" class="btn-accent">View Portfolio</a>
+      </nav>
+
+      <button id="mobileBtn" 
+              type="button"
+              aria-expanded="false" 
+              aria-controls="mobileMenu" 
+              class="mobile-toggle" 
+              aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation" style="display: none;">
+    <div class="mobile-card">
+      <button id="mobileClose" 
+              type="button"
+              class="mobile-close" 
+              aria-label="Close navigation menu">✕</button>
+      <nav class="mobile-nav" aria-label="Mobile navigation menu">
+        <a href="#home" data-link-mobile class="mobile-link">Home</a>
+        <a href="#about" data-link-mobile class="mobile-link">About</a>
+        <a href="#skills" data-link-mobile class="mobile-link">Skills</a>
+        <a href="#projects" data-link-mobile class="mobile-link">Projects</a>
+        <a href="#testimonials" data-link-mobile class="mobile-link">Reviews</a>
+        <a href="#contact" data-link-mobile class="mobile-link">Contact</a>
+        <a href="#projects" data-link-mobile class="mobile-cta">View Portfolio</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <section id="home" class="hero section reveal">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="kicker">Digital Professional</span>
+            <h1 class="hero-title">Building Intuitive and Performant Digital Experiences</h1>
+
+            <div class="hero-ctas">
+              <a href="#projects" class="btn-accent">View Portfolio</a>
+              <a href="#contact" class="btn-ghost">Contact Me</a>
+            </div>
+
+            <p class="hero-meta">
+              Specialties: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>
+            </p>
+          </div>
+
+          <div class="hero-photo-container">
+            <div class="photo-backdrop" aria-hidden="true"></div>
+            <div class="photo-glow" aria-hidden="true"></div>
+            <img src="mordecai.jpeg" 
+                 alt="Portrait of Mordecai, frontend developer" 
+                 class="hero-photo"
+                 loading="eager"
+                 width="380"
+                 height="380">
+            <div class="photo-badge">
+              <div class="badge-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="badge-text">
+                <div class="badge-title">Available for Work</div>
+                <div class="badge-subtitle">Remote & Freelance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container">
+        <div class="grid about-grid">
+          <aside class="card about-card">
+            <img src="DSC_9941~3_2.jpg" 
+                 alt="Mordecai smiling portrait" 
+                 class="avatar small" 
+                 width="84" 
+                 height="84"
+                 loading="lazy">
+            <h2>About Me</h2>
+            <p class="muted">I'm a frontend developer passionate about building scalable, high-quality digital products that solve real problems. My work is guided by UX-first thinking and backed by practical, clean engineering, ensuring every project is intuitive, responsive, and performance-driven.</p>
+            <p class="muted">I specialize in turning ideas, wireframes, and designs into functional web experiences using modern frontend technologies. I care deeply about structure, accessibility, responsiveness, and smooth user interactions—because great products aren't just built, they're refined.</p>
+            <ul class="info-list">
+              <li><strong>Location:</strong> Kaduna, Nigeria</li>
+              <li><strong>Availability:</strong> Freelance & Remote</li>
+            </ul>
+          </aside>
+
+          <div class="card bio-card">
+            <h2>Professional Bio</h2>
+            <p class="muted">I'm a digital professional who crafts thoughtful web experiences — from design systems to production-grade frontend. I specialize in building reusable components and data-driven UIs with a strong eye on performance and accessibility.</p>
+
+            <div class="two-grid">
+              <div class="mini">
+                <h3>What I Do</h3>
+                <ul class="muted">
+                  <li>Build responsive and accessible websites</li>
+                  <li>Convert UI/UX designs into clean, semantic code</li>
+                  <li>Create interactive user interfaces with JavaScript</li>
+                  <li>Optimize websites for performance and usability</li>
+                </ul>
+              </div>
+              <div class="mini">
+                <h3>Tech Stack</h3>
+                <ul class="muted">
+                  <li><strong>HTML5</strong> – semantic, accessible structure</li>
+                  <li><strong>CSS3</strong> – modern layouts, animations</li>
+                  <li><strong>JavaScript (ES6+)</strong> – interactivity, DOM manipulation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">Core competencies organized by category with proficiency indicators.</p>
+        </header>
+
+        <div class="grid skills-grid">
+          <article class="card">
+            <h3>Frontend</h3>
+            <div class="skill">
+              <h4 id="skill-html-label">HTML <span class="muted">90%</span></h4>
+              <div class="progress-container">
+                <div id="skill-html" 
+                     class="progress-bar" 
+                     data-progress="90" 
+                     role="progressbar" 
+                     aria-labelledby="skill-html-label"
+                     aria-valuenow="0" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <h4 id="skill-css-label">CSS <span class="muted">90%</span></h4>
+              <div class="progress-container">
+                <div id="skill-css" 
+                     class="progress-bar" 
+                     data-progress="90" 
+                     role="progressbar" 
+                     aria-labelledby="skill-css-label"
+                     aria-valuenow="0" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <h4 id="skill-javascript-label">JavaScript <span class="muted">85%</span></h4>
+              <div class="progress-container">
+                <div id="skill-javascript" 
+                     class="progress-bar" 
+                     data-progress="85" 
+                     role="progressbar" 
+                     aria-labelledby="skill-javascript-label"
+                     aria-valuenow="0" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Backend & Tools</h3>
+            <div class="skill">
+              <h4 id="skill-python-label">Python <span class="muted">70%</span></h4>
+              <div class="progress-container">
+                <div id="skill-python" 
+                     class="progress-bar" 
+                     data-progress="70" 
+                     role="progressbar" 
+                     aria-labelledby="skill-python-label"
+                     aria-valuenow="0" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <h4 id="skill-git-label">Git & Version Control <span class="muted">75%</span></h4>
+              <div class="progress-container">
+                <div id="skill-git" 
+                     class="progress-bar" 
+                     data-progress="75" 
+                     role="progressbar" 
+                     aria-labelledby="skill-git-label"
+                     aria-valuenow="0" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Tools & Design</h3>
+            <div class="tool-grid">
+              <span class="tool">VS Code</span>
+              <span class="tool">Git</span>
+              <span class="tool">AI Assistant</span>
+              <span class="tool">Figma</span>
+              <span class="tool">Chrome DevTools</span>
+              <span class="tool">Responsive Design</span>
+            </div>
+            <h4 class="mt">Other Skills</h4>
+            <p class="muted">Design systems, component architecture, performance tuning, accessibility standards (WCAG), and cross-browser compatibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>Selected Projects</h2>
+          <p class="muted">Responsive showcase with live demos and source code links.</p>
+        </header>
+
+        <div class="grid project-grid">
+          <article class="project card">
+            <h3>Registration System</h3>
+            <p class="muted">A comprehensive registration system with real-time validation and secure data handling built with modern web technologies.</p>
+            <div class="tags">
+              <span class="project-tech">HTML</span>
+              <span class="project-tech">CSS</span>
+              <span class="project-tech">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="link">Live Demo</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="link">Source Code</a>
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3>Church Website</h3>
+            <p class="muted">A modern church website with event management, sermon archives, and community features designed for easy navigation and engagement.</p>
+            <div class="tags">
+              <span class="project-tech">HTML</span>
+              <span class="project-tech">CSS</span>
+              <span class="project-tech">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="link">Live Demo</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="link">Source Code</a>
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3>Performance-First Marketing Site</h3>
+            <p class="muted">A blazingly fast marketing site optimized for Core Web Vitals using modern bundling and image optimization strategies.</p>
+            <div class="tags">
+              <span class="project-tech">Next.js</span>
+              <span class="project-tech">Image Opt</span>
+              <span class="project-tech">Lighthouse</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="link">Live Demo</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="link">Source Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>Testimonials</h2>
+          <p class="muted">What clients and collaborators say about working with me.</p>
+        </header>
+
+        <div class="grid testimonial-grid">
+          <article class="card testimonial">
+            <div class="testimonial-header">
+              <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=4a9eff&color=fff&size=48" 
+                   alt="" 
+                   class="testimonial-avatar" 
+                   width="48" 
+                   height="48"
+                   loading="lazy">
+              <div>
+                <h3>Sarah Chen</h3>
+                <p class="muted small">Product Manager, TechCorp</p>
+              </div>
+            </div>
+            <div class="rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="muted">"Mordecai delivered a flawless frontend for our dashboard. His attention to accessibility and performance was outstanding. The code was clean, well-documented, and easy for our team to maintain."</p>
+          </article>
+
+          <article class="card testimonial">
+            <div class="testimonial-header">
+              <img src="https://ui-avatars.com/api/?name=David+Martinez&background=ff6b6b&color=fff&size=48" 
+                   alt="" 
+                   class="testimonial-avatar" 
+                   width="48" 
+                   height="48"
+                   loading="lazy">
+              <div>
+                <h3>David Martinez</h3>
+                <p class="muted small">Founder, StartupHub</p>
+              </div>
+            </div>
+            <div class="rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="muted">"Working with Mordecai was a pleasure. He transformed our designs into a responsive, lightning-fast website that exceeded expectations. His communication and problem-solving skills are top-notch."</p>
+          </article>
+
+          <article class="card testimonial">
+            <div class="testimonial-header">
+              <img src="https://ui-avatars.com/api/?name=Emily+Johnson&background=51cf66&color=fff&size=48" 
+                   alt="" 
+                   class="testimonial-avatar" 
+                   width="48" 
+                   height="48"
+                   loading="lazy">
+              <div>
+                <h3>Emily Johnson</h3>
+                <p class="muted small">UX Designer, CreativeStudio</p>
+              </div>
+            </div>
+            <div class="rating" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="muted">"Mordecai brought my designs to life with pixel-perfect precision. His understanding of design principles and ability to implement smooth interactions made the collaboration seamless."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Have a project or just want to say hi? Fill out the form or use the contact details below.</p>
+        </header>
+
+        <div class="grid contact-grid">
+          <form id="contactForm" class="card contact-form" novalidate>
+            
+            <label class="label" for="name">Name <span aria-label="required">*</span></label>
+            <input id="name" 
+                   name="name" 
+                   type="text" 
+                   class="input" 
+                   placeholder="Your name" 
+                   required 
+                   autocomplete="name"
+                   aria-required="true">
+
+            <label class="label" for="email">Email <span aria-label="required">*</span></label>
+            <input id="email" 
+                   name="email" 
+                   type="email" 
+                   class="input" 
+                   placeholder="name@example.com" 
+                   required 
+                   autocomplete="email"
+                   aria-required="true">
+
+            <label class="label" for="message">Message <span aria-label="required">*</span></label>
+            <textarea id="message" 
+                      name="message" 
+                      class="input" 
+                      rows="5" 
+                      placeholder="Tell me about your project..." 
+                      required
+                      aria-required="true"></textarea>
+
+            <button class="btn-accent" type="submit">Send Message</button>
+            
+            <div id="contactMsg" class="contact-msg" aria-live="polite" role="status"></div>
+          </form>
+
+          <aside class="card contact-info">
+            <h3>Contact Details</h3>
+            <p class="muted">Get in touch via email, phone, or connect on professional networks.</p>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:mordecaijames78@gmail.com">mordecaijames78@gmail.com</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></li>
+              <li><strong>Phone:</strong> <a href="https://wa.me/2349077673110" target="_blank" rel="noopener noreferrer">+234 907 767 3110</a></li>
+            </ul>
+            
+            <nav class="social-links" aria-label="Social media links">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              
+              <a href="https://www.facebook.com/DrummerKingmjt" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook profile">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              
+              <a href="https://wa.me/2349077673110" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp chat">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+                  <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
+                </svg>
+              </a>
+              
+              <a href="mailto:mordecaijames78@gmail.com" class="social-link" aria-label="Send email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+            </nav>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cookie Banner -->
+  <aside id="cookieBanner" class="cookie-banner" role="complementary" aria-label="Cookie consent banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <p>🍪 We use cookies to enhance your experience</p>
+        <p class="muted small">This website uses cookies to improve functionality and analyze traffic. By continuing to use this site, you accept our use of cookies. <a href="privacy.html">Learn more</a></p>
+      </div>
+      <div class="cookie-actions">
+        <button id="cookieAccept" type="button" class="cookie-btn accept">Accept All</button>
+        <button id="cookieDecline" type="button" class="cookie-btn decline">Decline</button>
+        <button id="cookieSettings" type="button" class="cookie-btn settings">Settings</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="muted small">© <span id="year"></span> Mordecai — Tech Guy. All rights reserved.</p>
+      <nav class="links" aria-label="Footer navigation">
+        <a href="privacy.html" class="muted small">Privacy</a>
+        <a href="terms.html" class="muted small">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="Index.js"></script>
+</body>
+</html>
